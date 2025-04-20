@@ -1,0 +1,25 @@
+# Pradana Figo Ariasya
+# 123140063
+# PBOBRA
+
+import math  # Import modul math untuk menggunakan fungsi sqrt (akar kuadrat)
+
+while True:  # Loop terus sampai input yang valid diterima
+    try:
+        angka = input("Masukkan angka: ")  # Meminta input dari pengguna
+        angka = float(angka)  # Mencoba mengonversi input ke tipe data float
+        
+        if angka < 0:
+            # Jika angka kurang dari 0, tampilkan pesan error tentang angka negatif
+            print("Input tidak valid. Harap masukkan angka positif.")
+        elif angka == 0:
+            # Jika angka sama dengan 0, tampilkan pesan error tentang nol
+            print("Error: Akar kuadrat dari nol tidak diperbolehkan.")
+        else:
+            # Jika angka positif, hitung akar kuadratnya
+            akar = math.sqrt(angka)
+            print(f"Akar kuadrat dari {angka} adalah {akar}")
+            break  # Keluar dari loop setelah berhasil menghitung
+    except ValueError:
+        # Jika input tidak bisa diubah menjadi float (contoh: teks seperti "Hello")
+        print("Input tidak valid. Harap masukkan angka yang valid.")
